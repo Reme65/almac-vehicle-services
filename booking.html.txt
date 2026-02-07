@@ -1,0 +1,63 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment | Almac & Sons Vehicle Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<h1>Almac & Sons Vehicle Services</h1>
+<ul>
+<li><a href="index.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="booking.html">Booking & Contact</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main>
+<h2>Book an Appointment</h2>
+<form class="booking-form">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+
+<label for="service">Service Required</label>
+<select id="service" name="service" required>
+<option value="mot">MOT</option>
+<option value="service">Servicing</option>
+<option value="repair">Repair</option>
+</select>
+
+
+<label for="message">Additional Information</label>
+<textarea id="message" name="message"></textarea>
+
+
+<button type="submit">Submit Booking</button>
+</form>
+
+
+<section class="contact">
+<h3>Contact Us</h3>
+<p>Phone: 01234 567890</p>
+<p>Email: info@almacandsons.co.uk</p>
+<p>Address: 1 High Street, Yourtown</p>
+</section>
+</main>
+
+
+<footer>
+<p>&copy; 2026 Almac & Sons Vehicle Services</p>
+</footer>
+</body>
+</html>

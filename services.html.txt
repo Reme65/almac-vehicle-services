@@ -1,0 +1,38 @@
+<!-- services.html -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Almac & Sons Vehicle Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<h1>Almac & Sons Vehicle Services</h1>
+<ul>
+<li><a href="index.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="booking.html">Booking & Contact</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main>
+<h2>Services We Offer</h2>
+<ul class="services-list">
+<li><strong>MOT Testing:</strong> Full MOT compliance checks by qualified mechanics.</li>
+<li><strong>Full & Interim Servicing:</strong> Oil changes, fluid checks, and preventative maintenance tailored to your vehicle.</li>
+<li><strong>Brakes & Exhausts:</strong> Safety-critical components inspected and repaired.</li>
+<li><strong>Diagnostics:</strong> Engine and electrical diagnostics using modern equipment.</li>
+<li><strong>Tyres & Batteries:</strong> Replacement and maintenance to keep you safe on the road.</li>
+<li><strong>General Repairs:</strong> From minor adjustments to major repairs, all handled by experienced mechanics.</li>
+</ul>
+</main>
+
+
+<footer>
+<p>&copy; 2026 Almac & Sons Vehicle Services</p>
+</footer>
+</body>
+</html>

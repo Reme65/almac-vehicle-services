@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Almac and sons vehicle services | MOT & Servicing</title>
+<meta name="description" content="Family-run garage offering MOTs, servicing, and repairs.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<h1>Almac & Sons Garage</h1>
+<ul>
+<li><a href="index.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="booking.html">Booking & Contact</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main>
+<section class="hero">
+<h2>Your Trusted Local Garage</h2>
+<p>Family-run, honest pricing, and reliable service for over 20 years.</p>
+</section>
+
+
+<section>
+<h2>About Us</h2>
+<p>Almac & Sons Garage is a family-run business proudly serving the local community. We specialise in MOT testing, vehicle servicing, and general repairs for all makes and models.</p>
+<p>Customer satisfaction and safety are at the heart of everything we do.</p>
+</section>
+</main>
+
+
+<footer>
+<p>&copy; 2026 Smith & Sons Garage</p>
+</footer>
+</body>
+</html>
