@@ -9,11 +9,13 @@
 <header>
 <nav class="navbar">
 <h1>Almac & Sons Vehicle Services</h1>
-<ul>
-<li><a href="index.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="booking.html">Booking & Contact</a></li>
-</ul>
+<!-- Mobile menu toggle button -->
+    <button class="menu-toggle" aria-label="Open Menu">☰ Menu</button>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Booking</a>
+    </nav>
 </nav>
 </header>
 
@@ -35,15 +37,10 @@
 <p>&copy; 2026 Almac & Sons Vehicle Services</p>
 
 </footer>
-<script id="mobile-nav">
-    // Create hamburger button dynamically
-    var header = document.querySelector('header');
-    var nav = document.querySelector('header nav');
-
-    var menuButton = document.createElement('button');
-    menuButton.textContent = 'Menu';
-    menuButton.className = 'menu-toggle';
-    header.insertBefore(menuButton, nav);
+<script>
+    // Mobile dropdown toggle
+    var menuButton = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.nav-links');
 
     menuButton.addEventListener('click', function() {
         nav.classList.toggle('active');

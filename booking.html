@@ -14,7 +14,7 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="booking.html">Booking</a>
-            <a href="about.html">About</a>
+           
         </nav>
     </header>
 
@@ -101,15 +101,10 @@
             }
         });
     </script>
-    <script id="mobile-nav">
-    // Create hamburger button dynamically
-    var header = document.querySelector('header');
-    var nav = document.querySelector('header nav');
-
-    var menuButton = document.createElement('button');
-    menuButton.textContent = 'Menu';
-    menuButton.className = 'menu-toggle';
-    header.insertBefore(menuButton, nav);
+    <script>
+    // Mobile dropdown toggle
+    var menuButton = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.nav-links');
 
     menuButton.addEventListener('click', function() {
         nav.classList.toggle('active');
