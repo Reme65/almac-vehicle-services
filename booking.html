@@ -1,113 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Almac & Sons Vehicle Repairs</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking | Almac & Sons Vehicle Repairs</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <h1>Almac & Sons Vehicle Repairs</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="booking.html">Booking</a>
-           
-        </nav>
-    </header>
+<header>
+    <h1>Almac & Sons Vehicle Repairs</h1>
+    <button class="menu-toggle" aria-label="Open Menu">☰ Menu</button>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Booking</a>
+    </nav>
+</header>
 
-    <!-- Main Content -->
-    <main>
-        <section>
-            <h2>Book an Appointment</h2>
-            <form id="bookingForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+<main>
+    <section>
+        <h2>Book an Appointment</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-                <label for="service">Service Required:</label>
-                <select id="service" name="service" required>
-                    <option value="">Select a service</option>
-                    <option value="mot">MOT Testing</option>
-                    <option value="servicing">General Servicing</option>
-                    <option value="repairs">Repairs</option>
-                </select>
+            <label for="service">Service Required:</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="mot">MOT Testing</option>
+                <option value="servicing">General Servicing</option>
+                <option value="repairs">Repairs</option>
+            </select>
 
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" name="date" required>
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
 
-                <button type="submit">Book Now</button>
-            </form>
-        </section>
-    </main>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+</main>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Almac & Sons Vehicle Repairs</p>
-    </footer>
+<footer>
+    <p>© 2026 Almac & Sons Vehicle Repairs</p>
+</footer>
 
-    <!-- JavaScript with longhand style -->
-    <script>
-        // Step 1: Get the form element by ID
-        var bookingForm = document.getElementById('bookingForm');
-
-        // Step 2: Add event listener for form submission
-        bookingForm.addEventListener('submit', function(event) {
-            // Prevent default form submission (page reload)
-            event.preventDefault();
-
-            // Step 3: Get all input values individually
-            var nameElement = document.getElementById('name');
-            var emailElement = document.getElementById('email');
-            var serviceElement = document.getElementById('service');
-            var dateElement = document.getElementById('date');
-
-            var nameValue = nameElement.value.trim();
-            var emailValue = emailElement.value.trim();
-            var serviceValue = serviceElement.value;
-            var dateValue = dateElement.value;
-
-            // Step 4: Check for empty fields
-            if (!nameValue || !emailValue || !serviceValue || !dateValue) {
-                window.alert('Please fill in all required fields before submitting.');
-                return; // Stop form submission
-            }
-
-            // Step 5: Basic email validation
-            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/i;
-            if (!emailPattern.test(emailValue)) {
-                window.alert('Please enter a valid email address.');
-                return; // Stop submission
-            }
-
-            // Step 6: Show confirmation popup
-            var confirmationMessage = 
-                'Please confirm your booking details:\n\n' +
-                'Name: ' + nameValue + '\n' +
-                'Email: ' + emailValue + '\n' +
-                'Service: ' + serviceValue + '\n' +
-                'Date: ' + dateValue;
-
-            var confirmationResult = window.confirm(confirmationMessage);
-
-            // Step 7: If user confirms, show thank-you alert and reset form
-            if (confirmationResult) {
-                window.alert('Thank you! Your booking has been submitted.');
-                bookingForm.reset();
-            }
-        });
-    </script>
-    <script>
-    // Mobile dropdown toggle
+<script>
+    // Mobile nav toggle
     var menuButton = document.querySelector('.menu-toggle');
-    var nav = document.querySelector('.nav-links');
-
+    var navLinks = document.querySelector('.nav-links');
     menuButton.addEventListener('click', function() {
-        nav.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Booking form validation
+    var bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var nameValue = document.getElementById('name').value.trim();
+        var emailValue = document.getElementById('email').value.trim();
+        var serviceValue = document.getElementById('service').value;
+        var dateValue = document.getElementById('date').value;
+
+        if (!nameValue || !emailValue || !serviceValue || !dateValue) {
+            window.alert('Please fill in all required fields before submitting.');
+            return;
+        }
+
+        var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/i;
+        if (!emailPattern.test(emailValue)) {
+            window.alert('Please enter a valid email address.');
+            return;
+        }
+
+        var confirmMessage = 
+            'Please confirm your booking details:\n\n' +
+            'Name: ' + nameValue + '\n' +
+            'Email: ' + emailValue + '\n' +
+            'Service: ' + serviceValue + '\n' +
+            'Date: ' + dateValue;
+
+        if (window.confirm(confirmMessage)) {
+            window.alert('Thank you! Your booking has been submitted.');
+            bookingForm.reset();
+        }
     });
 </script>
 </body>

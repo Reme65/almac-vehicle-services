@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almac & Sons Vehicle Repairs</title>
-    <!-- Correct CSS path -->
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Almac & Sons Vehicle Repairs</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Almac & Sons Vehicle Repairs</h1>
-        <!-- Mobile menu toggle button -->
+<header>
+    <h1>Almac & Sons Vehicle Repairs</h1>
     <button class="menu-toggle" aria-label="Open Menu">☰ Menu</button>
     <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="booking.html">Booking</a>
     </nav>
-    </header>
+</header>
 
-    <main>
-        <section>
-            <h2>Welcome to Almac & Sons</h2>
-            <p>
-              Your trusted family-run garage offering MOTs, servicing, and repairs.
-              With over 30 years of experience, we pride ourselves on quality workmanship and excellent customer service. 
-               Whether you need a quick MOT or a full service, our skilled mechanics are here to help keep your vehicle running smoothly.
-             All vehicles will be subject to a safety inspection prior to any work being carried out.
-             Customers will be advised of any defects or necessary repairs before any work begins.
-             Any parts removed will be held pending customer instructions regarding disposal.
-             Customers will be given a copy of the safety inspection sheet detailing any work required 
-             in order to make informed decisions about their vehicle.
-            </p>
-        </section>
-    </main>
+<main>
+    <section>
+        <h2>Welcome to Almac & Sons</h2>
+        <p>Your trusted family-run garage offering MOTs, servicing, and repairs.</p>
+        <p>With over 30 years of experience, we pride ourselves on quality workmanship and excellent customer service. Whether you need a quick MOT or a full service, our skilled mechanics are here to help keep your vehicle running smoothly.</p>
+        <p>All vehicles will be subject to a safety inspection prior to any work being carried out. Customers will be advised of any defects or necessary repairs before any work begins.</p>
+        <p>Any parts removed will be held pending customer instructions regarding disposal. Customers will be given a copy of the safety inspection sheet detailing any work required in order to make informed decisions about their vehicle.</p>
+    </section>
+</main>
 
-    <footer>
-        <p>© 2026 Almac & Sons Vehicle Repairs</p>
-    </footer>
-     <script>
-    // Mobile dropdown toggle
+<footer>
+    <p>© 2026 Almac & Sons Vehicle Repairs</p>
+</footer>
+
+<script>
+    // Mobile nav toggle
     var menuButton = document.querySelector('.menu-toggle');
-    var nav = document.querySelector('.nav-links');
+    var navLinks = document.querySelector('.nav-links');
 
     menuButton.addEventListener('click', function() {
-        nav.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
 </script>
 </body>
