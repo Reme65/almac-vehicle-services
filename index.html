@@ -14,7 +14,7 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="booking.html">Booking</a>
-            <a href="about.html">About</a>
+            
         </nav>
     </header>
 
@@ -37,5 +37,14 @@
     <footer>
         <p>© 2026 Almac & Sons Vehicle Repairs</p>
     </footer>
+     <!-- JS for mobile dropdown nav -->
+    <script>
+        var menuButton = document.querySelector('.menu-toggle');
+        var nav = document.querySelector('header nav');
+
+        menuButton.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

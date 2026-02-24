@@ -101,5 +101,19 @@
             }
         });
     </script>
+    <script id="mobile-nav">
+    // Create hamburger button dynamically
+    var header = document.querySelector('header');
+    var nav = document.querySelector('header nav');
+
+    var menuButton = document.createElement('button');
+    menuButton.textContent = 'Menu';
+    menuButton.className = 'menu-toggle';
+    header.insertBefore(menuButton, nav);
+
+    menuButton.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
+</script>
 </body>
 </html>

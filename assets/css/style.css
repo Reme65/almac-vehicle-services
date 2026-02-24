@@ -1,67 +1,93 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Basic body and header styling */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
+    margin: 0;
     line-height: 1.5;
     background-color: #f9f9f9;
     color: #333;
 }
 
-/* Header and Nav */
 header {
-    background-color: #003366; /* Deep blue */
+    background-color: #003366;
     color: white;
     padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* smaller on mobile */
     margin-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin-right: 1rem;
-    font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.menu-toggle {
+    display: none;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-/* Main content */
+/* Main and footer spacing */
 main {
-    min-height: 60vh; /* ensures footer is at bottom */
+    flex: 1;
     padding: 2rem;
+    min-height: 60vh;
 }
 
-/* Sections */
-section {
-    margin-bottom: 2rem;
-}
-
-/* Footer */
 footer {
     background-color: #222;
     color: #fff;
     text-align: center;
     padding: 1rem 2rem;
-    font-size: 0.9rem;
 }
 
-/* Responsive tweaks */
+/* Responsive for tablets and mobile */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
+    nav {
+        display: none; /* hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
     }
-    
-    nav a {
+
+    nav.active {
+        display: flex; /* show when menu button clicked */
+    }
+
+    .menu-toggle {
         display: block;
         margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        justify-content: flex-end;
     }
 }
