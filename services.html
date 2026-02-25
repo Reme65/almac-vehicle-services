@@ -1,45 +1,58 @@
+<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Almac & Sons Vehicle Repairs</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Almac & Sons Vehicle Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Almac & Sons Vehicle Repairs</h1>
-    <button class="menu-toggle" aria-label="Open Menu">☰ Menu</button>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="booking.html">Booking</a>
+  <header>
+    <nav class="navbar">
+      <h1>Almac & Sons Vehicle Services</h1>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Booking & Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
-    <section>
-        <h2>Our Services</h2>
-        <ul>
-            <li>MOT Testing, MOT Repairs, Clutches</li>
-            <li>General Servicing, Oil Change, Tyre Replacement</li>
-            <li>Vehicle Repairs, Steering and Suspension, Brake Repairs</li>
-        </ul>
-    </section>
-    <!-- Filler image above footer -->
-    <img src="assets/images/maxim-hopman-s4d_ESS0ylA-unsplash.jpg" alt="Modern vehicle maintenance workspace with organized tools and equipment, showcasing professional garage environment and attention to detail in automotive service" class="page-filler">
-</main>
+  <main>
+    <h2>Services We Offer</h2>
+    <ul class="services-list">
+      <li><strong>MOT Testing:</strong> Full MOT compliance checks by qualified mechanics.</li>
+      <li><strong>Full & Interim Servicing:</strong> Oil changes, fluid checks, and preventative maintenance tailored to your vehicle.</li>
+      <li><strong>Brakes & Exhausts:</strong> Safety-critical components inspected and repaired.</li>
+      <li><strong>Diagnostics:</strong> Engine and electrical diagnostics using modern equipment.</li>
+      <li><strong>Tyres & Batteries:</strong> Replacement and maintenance to keep you safe on the road.</li>
+      <li><strong>General Repairs:</strong> From minor adjustments to major repairs, all handled by experienced mechanics.</li>
+    </ul>
 
-<footer>
-    <p>© 2026 Almac & Sons Vehicle Repairs</p>
-</footer>
+    <div class="image-wrapper">
+      <img src="assets/images/mechanic-working-car-suspension-repair-shop.jpg" alt="Mechanic carrying out vehicle servicing" class="page-image">
+    </div>
+  </main>
 
-<script>
-    var menuButton = document.querySelector('.menu-toggle');
-    var navLinks = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
-</script>
+  <footer>
+    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
+  </footer>
 </body>
 </html>

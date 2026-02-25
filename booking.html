@@ -1,94 +1,76 @@
+<!-- booking.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Booking | Almac & Sons Vehicle Repairs</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | Almac & Sons Vehicle Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Almac & Sons Vehicle Repairs</h1>
-    <button class="menu-toggle" aria-label="Open Menu">☰ Menu</button>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="booking.html">Booking</a>
+  <header>
+    <nav class="navbar">
+      <h1>Almac & Sons Vehicle Services</h1>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Booking & Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
-    <section>
-        <h2>Book an Appointment</h2>
-        <form id="bookingForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+  <main>
+    <h2>Book an Appointment</h2>
+    <form class="booking-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-            <label for="service">Service Required:</label>
-            <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="mot">MOT Testing</option>
-                <option value="servicing">General Servicing</option>
-                <option value="repairs">Repairs</option>
-            </select>
+      <label for="service">Service Required</label>
+      <select id="service" name="service" required>
+        <option value="mot">MOT</option>
+        <option value="service">Servicing</option>
+        <option value="repair">Repair</option>
+      </select>
 
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required>
+      <label for="message">Additional Information</label>
+      <textarea id="message" name="message"></textarea>
 
-            <button type="submit">Book Now</button>
-        </form>
+      <button type="submit">Submit Booking</button>
+    </form>
+
+    <section class="contact">
+      <h3>Contact Us</h3>
+      <p>Phone: 01234 567890</p>
+      <p>Email: info@almacandsons.co.uk</p>
+      <p>Address: 1 High Street, Yourtown</p>
     </section>
-    <img src="assets/images/joseph-pillado-n99UTGfbvFQ-unsplash.jpg" alt="Booking illustration" class="page-filler">
-</main>
 
-<footer>
-    <p>© 2026 Almac & Sons Vehicle Repairs</p>
-</footer>
+    <div class="image-wrapper">
+    <img src="assets/images/male-customer-auto-service-center-explaning-problems-his-car-mechanic-with-clipboard.jpg" alt="A male customer and mechanic discuss vehicle maintenance at an auto service center. The mechanic holds a clipboard while they examine the car together. The professional workshop environment conveys collaboration, trust, and a solution-focused approach to vehicle services." class="page-image">
+    </div>
+  </main>
 
-<script>
-    // Mobile nav toggle
-    var menuButton = document.querySelector('.menu-toggle');
-    var navLinks = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
-
-    // Booking form validation
-    var bookingForm = document.getElementById('bookingForm');
-    bookingForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        var nameValue = document.getElementById('name').value.trim();
-        var emailValue = document.getElementById('email').value.trim();
-        var serviceValue = document.getElementById('service').value;
-        var dateValue = document.getElementById('date').value;
-
-        if (!nameValue || !emailValue || !serviceValue || !dateValue) {
-            window.alert('Please fill in all required fields before submitting.');
-            return;
-        }
-
-        var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/i;
-        if (!emailPattern.test(emailValue)) {
-            window.alert('Please enter a valid email address.');
-            return;
-        }
-
-        var confirmMessage = 
-            'Please confirm your booking details:\n\n' +
-            'Name: ' + nameValue + '\n' +
-            'Email: ' + emailValue + '\n' +
-            'Service: ' + serviceValue + '\n' +
-            'Date: ' + dateValue;
-
-        if (window.confirm(confirmMessage)) {
-            window.alert('Thank you! Your booking has been submitted.');
-            bookingForm.reset();
-        }
-    });
-</script>
+  <footer>
+    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
+  </footer>
 </body>
 </html>
