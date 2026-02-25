@@ -5,25 +5,26 @@ body { font-family: Arial, sans-serif; display: flex; flex-direction: column; mi
 /* Header & Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    background-color: #8a65ce;
+    justify-content: space-between;
+    background-color: #003366;
     padding: 1rem 2rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .nav-left h1 {
-    color: red;              /* stand-out business name */
+    color: red;              
     font-size: 1.5rem;
     margin: 0;
+    line-height: 1;
 }
 
 .nav-center h2 {
-    color: #fff;             /* white current page name */
-    font-size: 0.85rem;      /* smaller than h1 */
-    margin: 0;
-    text-align: center;
+    color: #fff;             
+    font-size: 0.85rem;      
+    margin: 0 1rem;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .nav-right ul {
@@ -31,6 +32,7 @@ body { font-family: Arial, sans-serif; display: flex; flex-direction: column; mi
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-right li {
@@ -47,7 +49,7 @@ body { font-family: Arial, sans-serif; display: flex; flex-direction: column; mi
     text-decoration: underline;
 }
 
-/* Hamburger menu hidden by default */
+/* Hamburger menu for mobile */
 .menu-toggle {
     display: none;
     background: none;
@@ -93,9 +95,9 @@ main section p {
     line-height:1.6;
 }
 
-/* Section headers (H2) in content */
+/* Section headers */
 main h2 {
-    color: black;          
+    color: black;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -107,7 +109,8 @@ main h2 {
         align-items: flex-start;
     }
     .nav-center h2 {
-        margin-top: 0.5rem;
+        margin: 0.5rem 0;
+        text-align: left;
     }
     .nav-right ul {
         display: none;
@@ -125,7 +128,5 @@ main h2 {
         display: block;
         margin-top: 0.5rem;
     }
-    main section p {
-        font-size: 0.95rem;
-    }
+    main section p { font-size:0.95rem; }
 }

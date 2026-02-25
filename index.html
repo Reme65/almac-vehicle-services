@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Almac & Sons Vehicle Services</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Almac & Sons Vehicle Services</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <nav class="navbar">
-      <div class="nav-left">
-        <h1>Almac & Sons Vehicle Services</h1>
-      </div>
-
-      <div class="nav-center">
-        <h2>Home</h2> <!-- change this for other pages -->
-      </div>
-
-      <div class="nav-right">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Booking & Contact</a></li>
-        </ul>
-        <button class="menu-toggle">☰</button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <p>Family-run, honest pricing, and reliable service for over 20 years.</p>
-    </section>
-
-    <section>
-      <h2>About Us</h2>
-      <p>Almac & Sons Vehicle Services is a family-run business proudly serving the local community. Our team of qualified mechanics specialises in MOT testing, vehicle servicing, diagnostics, and general repairs for all makes and models.</p>
-      <p>Customer safety and satisfaction are at the heart of everything we do. We ensure every vehicle leaving our garage is roadworthy and compliant with legal MOT standards.</p>
-      <p>With over 30 years of experience, we pride ourselves on quality workmanship and excellent customer service. Whether you need a quick MOT or a full service, our skilled mechanics are here to help keep your vehicle running smoothly.</p>
-    </section>
-
-    <div class="image-wrapper">
-    <img src="assets/images/joseph-pillado-n99UTGfbvFQ-unsplash.jpg" alt="A mechanic in a black shirt and cap works under a red vehicle in a garage workshop, surrounded by red tool organizers, socket sets, and a hydraulic jack. The concrete floor and professional workspace convey a dedicated, hands-on atmosphere of skilled automotive service." class="page-image">
+<header>
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>Almac & Sons Vehicle Services</h1>
     </div>
-  </main>
+    <div class="nav-center">
+      <h2>Home</h2>
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Booking & Contact</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </nav>
+</header>
 
-  <footer>
-    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
-  </footer>
+<main>
+  <section>
+    <h2>About Us</h2>
+    <p>Almac & Sons Vehicle Services is a family-run business proudly serving the local community. Our team of qualified mechanics specialises in MOT testing, vehicle servicing, diagnostics, and general repairs for all makes and models.</p>
+    <p>Customer safety and satisfaction are at the heart of everything we do. We ensure every vehicle leaving our garage is roadworthy and compliant with legal MOT standards.</p>
+  </section>
 
-  <!-- Mobile menu JS -->
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-right ul');
+  <div class="image-wrapper">
+    <img src="assets/images/joseph-pillado-n99UTGfbvFQ-unsplash.jpg" alt="Mechanic in black shirt and cap working under a red vehicle in a garage, surrounded by red tool organizers and equipment including a floor jack and socket sets, demonstrating professional automotive service in a well-equipped workshop setting" class="page-image">
+  </div>
+</main>
 
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
+<footer>
+  <p>&copy; 2026 Almac & Sons Vehicle Services</p>
+</footer>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-right ul');
+menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
+</script>
+
 </body>
 </html>
