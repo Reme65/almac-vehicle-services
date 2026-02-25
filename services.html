@@ -1,102 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Almac & Sons Vehicle Services</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Almac & Sons Vehicle Services</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Header / Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-left">
-        <h1>Almac & Sons Vehicle Services</h1>
-      </div>
-
-      <div class="nav-center">
-        <h2>Services</h2>
-      </div>
-
-      <div class="nav-right">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Booking & Contact</a></li>
-        </ul>
-        <button class="menu-toggle">☰</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main content -->
-  <main>
-    <section>
-      <h2>Book an Appointment</h2>
-      <form class="booking-form" id="bookingForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="service">Service Required</label>
-        <select id="service" name="service" required>
-          <option value="" disabled selected>Select a service</option>
-          <option value="mot">MOT</option>
-          <option value="service">Servicing</option>
-          <option value="repair">Repair</option>
-        </select>
-
-        <label for="date">Preferred Date</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="message">Additional Information</label>
-        <textarea id="message" name="message"></textarea>
-
-        <button type="submit">Submit Booking</button>
-      </form>
-    </section>
-
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p>Phone: 01234 567890</p>
-      <p>Email: info@almacandsons.co.uk</p>
-      <p>Address: 1 High Street, Yourtown</p>
-    </section>
-
-    <div class="image-wrapper">
-      <img src="assets/images/male-customer-auto-service-center-explaning-problems-his-car-mechanic-with-clipboard.jpg" alt="Customer vehicle being inspected" class="page-image">
+<header>
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>Almac & Sons Vehicle Services</h1>
     </div>
-  </main>
+    <div class="nav-center">
+      <h2>Services</h2>
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Booking & Contact</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </nav>
+</header>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
-  </footer>
+<main>
+  <section>
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>MOT Testing:</strong> Full MOT compliance checks.</li>
+      <li><strong>Servicing:</strong> Oil changes, fluid checks, and maintenance.</li>
+      <li><strong>Brakes & Exhausts:</strong> Safety inspections and repairs.</li>
+      <li><strong>Diagnostics:</strong> Engine and electrical diagnostics.</li>
+      <li><strong>Tyres & Batteries:</strong> Replacement and maintenance.</li>
+      <li><strong>General Repairs:</strong> Minor to major repairs handled by experienced mechanics.</li>
+    </ul>
+  </section>
 
-  <!-- Scripts -->
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-right ul');
-    menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
+  <div class="image-wrapper">
+    <img src="assets/images/mechanic-working-car-suspension-repair-shop.jpg" alt="Mechanic carrying out vehicle servicing" class="page-image">
+  </div>
+</main>
 
-    // Booking form pop-up confirmation
-    const bookingForm = document.getElementById('bookingForm');
-    bookingForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // prevent actual submission
-      if (!bookingForm.checkValidity()) {
-        alert('Please fill in all required fields.');
-        return;
-      }
-      const name = document.getElementById('name').value;
-      const service = document.getElementById('service').value;
-      const date = document.getElementById('date').value;
-      alert(`Thank you, ${name}!\nYour booking for ${service.toUpperCase()} on ${date} has been received.`);
-      bookingForm.reset();
-    });
-  </script>
+<footer>
+  <p>&copy; 2026 Almac & Sons Vehicle Services</p>
+</footer>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-right ul');
+menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
+</script>
+
 </body>
 </html>
