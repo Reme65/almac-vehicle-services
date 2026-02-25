@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Almac & Sons Vehicle Services | MOT & Servicing</title>
+   
   <meta name="description" content="Family-run garage offering MOTs, servicing, and repairs by qualified mechanics.">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -28,6 +29,7 @@
   <header>
     <nav class="navbar">
       <h1>Almac & Sons Vehicle Services</h1>
+      <button class="menu-toggle">☰</button> <!-- only visible on mobile -->
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -60,5 +62,13 @@
   <footer>
     <p style="text-align: center;">&copy; 2026 Almac & Sons Vehicle Services</p>
   </footer>
+  <script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.navbar ul');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+</script>
 </body>
 </html>
