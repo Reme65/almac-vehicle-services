@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking & Contact | Almac & Sons Vehicle Services</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking & Contact | Almac & Sons Vehicle Services</title>
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1>Almac & Sons Vehicle Services</h1>
-      <h2>Booking & Contact</h2>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html">Booking & Contact</a></li>
-      </ul>
-      <button class="menu-toggle">☰</button>
-    </nav>
-  </header>
+<header>
+  <nav class="navbar">
+    <h1>Almac & Sons Vehicle Services</h1>
+    <h2>Booking & Contact</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html">Booking & Contact</a></li>
+    </ul>
+    <button class="menu-toggle">☰</button>
+  </nav>
+</header>
 
-  <main>
-    <form class="booking-form">
-      <label for="name">Name *</label>
-      <input type="text" id="name" name="name" required>
+<main>
+  <form class="booking-form">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+    <label for="service">Service Required *</label>
+    <select id="service" name="service" required>
+      <option value="">-- Select Service --</option>
+      <option value="mot">MOT</option>
+      <option value="service">Servicing</option>
+      <option value="repair">Repair</option>
+    </select>
+    <label for="date">Preferred Date *</label>
+    <input type="date" id="date" name="date" required>
+    <label for="message">Additional Information</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+    <button type="submit">Submit Booking</button>
+  </form>
 
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required>
+  <section class="contact">
+    <h3>Contact Us</h3>
+    <p>Phone: 01234 567890</p>
+    <p>Email: info@almacandsons.co.uk</p>
+    <p>Address: 1 High Street, Yourtown</p>
+  </section>
 
-      <label for="service">Service Required *</label>
-      <select id="service" name="service" required>
-        <option value="">-- Select Service --</option>
-        <option value="mot">MOT</option>
-        <option value="service">Servicing</option>
-        <option value="repair">Repair</option>
-      </select>
+  <div class="image-wrapper">
+    <img src="assets/images/joseph-pillado-n99UTGfbvFQ-unsplash.jpg" alt="Customer vehicle being inspected" class="page-image">
+  </div>
+</main>
 
-      <label for="date">Preferred Date *</label>
-      <input type="date" id="date" name="date" required>
+<footer>
+  <p>&copy; 2026 Almac & Sons Vehicle Services</p>
+</footer>
 
-      <label for="message">Additional Information</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-
-      <button type="submit">Submit Booking</button>
-    </form>
-
-    <section class="contact">
-      <h3>Contact Us</h3>
-      <p>Phone: 01234 567890</p>
-      <p>Email: info@almacandsons.co.uk</p>
-      <p>Address: 1 High Street, Yourtown</p>
-    </section>
-
-    <div class="image-wrapper">
-    <img src="assets/images/male-customer-auto-service-center-explaning-problems-his-car-mechanic-with-clipboard.jpg" alt="Customer discussing vehicle problems with mechanic holding clipboard at auto service center" class="page-image">
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
