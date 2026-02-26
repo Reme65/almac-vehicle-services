@@ -1,62 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Almac & Sons Vehicle Services</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Almac & Sons Vehicle Services</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-<header>
-  <nav class="navbar">
-    <div class="nav-left">
+  <header>
+    <nav class="navbar">
       <h1>Almac & Sons Vehicle Services</h1>
-    </div>
-    <div class="nav-center">
       <h2>Services</h2>
-    </div>
-    <div class="nav-right">
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="booking.html">Booking & Contact</a></li>
       </ul>
       <button class="menu-toggle">☰</button>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<main>
-  <section>
-    <h2>Our Services</h2>
-    <ul>
-      <li><strong>MOT Testing:</strong> Full MOT compliance checks.</li>
-      <li><strong>Servicing:</strong> Oil changes, fluid checks, and maintenance.</li>
-      <li><strong>Brakes & Exhausts:</strong> Safety inspections and repairs.</li>
-      <li><strong>Diagnostics:</strong> Engine and electrical diagnostics.</li>
-      <li><strong>Tyres & Batteries:</strong> Replacement and maintenance.</li>
-      <li><strong>General Repairs:</strong> Minor to major repairs handled by experienced mechanics.</li>
+  <main>
+    <h2>Services We Offer</h2>
+    <ul class="services-list">
+      <li><strong>MOT Testing:</strong> Full MOT compliance checks by qualified mechanics.</li>
+      <li><strong>Full & Interim Servicing:</strong> Oil changes, fluid checks, and preventative maintenance tailored to your vehicle.</li>
+      <li><strong>Brakes & Exhausts:</strong> Safety-critical components inspected and repaired.</li>
+      <li><strong>Diagnostics:</strong> Engine and electrical diagnostics using modern equipment.</li>
+      <li><strong>Tyres & Batteries:</strong> Replacement and maintenance to keep you safe on the road.</li>
+      <li><strong>General Repairs:</strong> From minor adjustments to major repairs, all handled by experienced mechanics.</li>
     </ul>
-  </section>
 
-  <div class="image-wrapper">
-    <figure class="image-wrapper">
-    <img src="assets/images/mechanic-working-car-suspension-repair-shop.jpg" alt="Mechanic carrying out vehicle servicing" class="page-image">
-    <figcaption class="caption">Skilled servicing for all vehicle types</figcaption>
-   </figure>
-  </div>
-</main>
+    <div class="image-wrapper">
+      <img src="assets/images/mechanic-working-car-suspension-repair-shop.jpg" alt="Mechanic carrying out vehicle servicing" class="page-image">
+    </div>
+  </main>
 
-<footer>
-  <p>&copy; 2026 Almac & Sons Vehicle Services</p>
-</footer>
+  <footer>
+    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
+  </footer>
 
-<script>
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-right ul');
-menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
-</script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

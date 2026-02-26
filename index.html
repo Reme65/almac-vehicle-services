@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home | Almac & Sons Vehicle Services</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Almac & Sons Vehicle Services</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-<header>
-  <nav class="navbar">
-    <div class="nav-left">
+  <header>
+    <nav class="navbar">
       <h1>Almac & Sons Vehicle Services</h1>
-    </div>
-    <div class="nav-center">
       <h2>Home</h2>
-    </div>
-    <div class="nav-right">
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="booking.html">Booking & Contact</a></li>
       </ul>
       <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome to Almac & Sons</h2>
+      <p>Your trusted family-run garage offering MOTs, servicing, and repairs. With over 30 years of experience, we pride ourselves on quality workmanship and excellent customer service.</p>
+      <p>All vehicles are subject to a safety inspection prior to any work. Customers are advised of any defects or necessary repairs before work begins.</p>
+    </section>
+
+    <div class="image-wrapper">
+      <img src="assets/images/joseph-pillado-n99UTGfbvFQ-unsplash.jpg" alt="Inside our local family garage" class="page-image">
     </div>
-  </nav>
-</header>
+  </main>
 
-<main>
-    <p class="intro">Reliable MOTs, servicing & repairs for all vehicles.</p>
-  <section>
-    <h2>About Us</h2>
-    <p>Almac & Sons Vehicle Services is a family-run business proudly serving the local community. Our team of qualified mechanics specialises in MOT testing, vehicle servicing, diagnostics, and general repairs for all makes and models.</p>
-    <p>Customer safety and satisfaction are at the heart of everything we do. We ensure every vehicle leaving our garage is roadworthy and compliant with legal MOT standards.</p>
-  </section>
+  <footer>
+    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
+  </footer>
 
-  <div class="image-wrapper">
-    <img src="assets/images/joseph-pillado-n99UTGfbvFQ-unsplash.jpg" alt="Mechanic in black shirt and cap working under a red vehicle in a garage, surrounded by red tool organizers and equipment including a floor jack and socket sets, demonstrating professional automotive service in a well-equipped workshop setting" class="page-image">
-  </div>
-</main>
-
-<footer>
-  <p>&copy; 2026 Almac & Sons Vehicle Services</p>
-</footer>
-
-<script>
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-right ul');
-menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
-</script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

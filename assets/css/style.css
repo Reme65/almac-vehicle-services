@@ -1,71 +1,54 @@
-/* Reset & body */
+/* Reset & Body */
 * { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: Arial, sans-serif; display: flex; flex-direction: column; min-height: 100vh; line-height:1.5; background:#f9f9f9; color:#333; }
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height:1.5;
+    background:#f9f9f9;
+    color:#333;
+}
 
-/* Header & Navbar */
+/* Header / Navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     background-color: #003366;
     padding: 1rem 2rem;
-    
 }
-.caption {
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    color: #555;
-}
-header h1 {
-  color: #e63946; /* slightly brighter red */
-  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
-}
-.intro { margin-bottom: 1rem; font-weight: bold; }
 
-.nav-left h1 {
-    color: red;              
+.navbar h1 {
+    color: red;
     font-size: 1.5rem;
     margin: 0;
-    line-height: 1;
 }
 
-.nav-center h2 {
-    color: #fff;             
-    font-size: 0.85rem;      
-    margin: 0 1rem;
-    line-height: 1;
+.navbar h2 {
+    color: yellow;
+    font-size: 0.85rem;
+    margin-left: auto;   /* pushes H2 to the right of H1 */
+    margin-right: 2rem;
     white-space: nowrap;
 }
-.services-list li {
-    margin-bottom: 0.5rem;
-}
-.nav-right ul {
+
+.nav-links {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
 }
 
-.nav-right li {
-    margin-left: 2rem;
+.nav-links li {
+    margin-left: 1rem;
 }
 
-.nav-right li a {
-    color: yellow;
+.nav-links a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.nav-right li a:hover {
-    text-decoration: underline;
-}
-.nav-right a[href="index.html"] {
-  text-decoration: underline;
-}
-
-/* Hamburger menu for mobile */
 .menu-toggle {
     display: none;
     background: none;
@@ -75,48 +58,70 @@ header h1 {
     cursor: pointer;
 }
 
-/* Main & Footer */
+/* Main Content */
 main {
-    flex:1;
+    flex: 1;
     padding: 2rem;
     max-width: 1100px;
     margin: 0 auto;
 }
 
+main section p {
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.page-image {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 8px;
+}
+
+.image-wrapper {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* Footer */
 footer {
     background:#222;
     color:#fff;
     text-align:center;
-    padding-top: 1rem;
     padding:1rem 2rem;
 }
 
-/* Page images */
-.image-wrapper {
-    width: 100%;
-    max-width: 1100px;
+/* Booking Form */
+.booking-form {
+    max-width: 600px;
     margin: 2rem auto;
-    padding: 0 1rem;
-}
-.page-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-/* Paragraph styling */
-main section p {
-    max-width: 800px;
-    margin-bottom: 1.5rem;
-    line-height:1.6;
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.booking-form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
-/* Section headers */
-main h2 {
-    color: black;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.booking-form button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #002244;
 }
 
 /* Mobile <820px */
@@ -125,25 +130,39 @@ main h2 {
         flex-direction: column;
         align-items: flex-start;
     }
-    .nav-center h2 {
-        margin: 0.5rem 0;
-        text-align: left;
+
+    .navbar h2 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0.5rem;
+        font-size: 1rem;
     }
-    .nav-right ul {
+
+    .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         margin-top: 0.5rem;
     }
-    .nav-right ul.active {
+
+    .nav-links.active {
         display: flex;
     }
-    .nav-right li {
-        margin: 0.5rem 0;
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
     }
+
     .menu-toggle {
         display: block;
         margin-top: 0.5rem;
     }
-    main section p { font-size:0.95rem; }
+}
+
+/* Desktop ≥821px */
+@media (min-width: 821px) {
+    .menu-toggle {
+        display: none;
+    }
 }
