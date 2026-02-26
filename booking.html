@@ -1,44 +1,74 @@
-<!-- booking.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book an Appointment | Almac & Sons Vehicle Services</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <style>
     .page-image {
       width: 100%;
+      max-width: 1100px;
       height: auto;
       display: block;
-      margin: 2rem 0;
+      margin: 2rem auto;
       border-radius: 8px;
     }
 
     .image-wrapper {
       width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
       padding: 0 1rem;
+    }
+
+    /* Form spacing */
+    .booking-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea,
+    .booking-form button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .booking-form button {
+      background-color: #003366;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .booking-form button:hover {
+      background-color: #002244;
     }
   </style>
 </head>
 <body>
   <header>
     <nav class="navbar">
-        <div class="nav-left"></div>
-      <h1>Almac & Sons Vehicle Services</h1>
+      <div class="nav-left">
+        <h1 style="color:red;">Almac & Sons Vehicle Services</h1>
+      </div>
+
       <div class="nav-center">
-        <h2>Booking & Contact</h2> <!-- change this for other pages -->
+        <h2 style="color:yellow;">Booking & Contact</h2>
       </div>
 
       <div class="nav-right">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html">Booking & Contact</a></li>
-      </ul>
-       <button class="menu-toggle">☰</button>
+        <ul>
+          <li><a href="index.html" style="color:white;">Home</a></li>
+          <li><a href="services.html" style="color:white;">Services</a></li>
+          <li><a href="booking.html" style="color:white;">Booking & Contact</a></li>
+        </ul>
+        <button class="menu-toggle">☰</button>
       </div>
     </nav>
   </header>
@@ -46,22 +76,25 @@
   <main>
     <h2>Book an Appointment</h2>
     <form class="booking-form">
-      <label for="name">Name</label>
+      <label for="name">Name *</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">Email</label>
+      <label for="email">Email *</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="service">Service Required</label>
-<select id="service" name="service" required>
-  <option value="" disabled selected>Please select a service</option>
-  <option value="mot">MOT</option>
-  <option value="service">Servicing</option>
-  <option value="repair">Repair</option>
-</select>
+      <label for="service">Service Required *</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select Service --</option>
+        <option value="mot">MOT</option>
+        <option value="service">Servicing</option>
+        <option value="repair">Repair</option>
+      </select>
+
+      <label for="date">Preferred Date *</label>
+      <input type="date" id="date" name="date" required>
 
       <label for="message">Additional Information</label>
-      <textarea id="message" name="message"></textarea>
+      <textarea id="message" name="message" rows="4"></textarea>
 
       <button type="submit">Submit Booking</button>
     </form>
@@ -74,40 +107,40 @@
     </section>
 
     <div class="image-wrapper">
-    <img src="assets/images/male-customer-auto-service-center-explaning-problems-his-car-mechanic-with-clipboard.jpg" alt="A male customer and mechanic discuss vehicle maintenance at an auto service center. The mechanic holds a clipboard while they examine the car together. The professional workshop environment conveys collaboration, trust, and a solution-focused approach to vehicle services." class="page-image">
+      <img src="assets/images/male-customer-auto-service-center-explaning-problems-his-car-mechanic-with-clipboard.jpg" alt="Customer vehicle being inspected" class="page-image">
     </div>
   </main>
 
   <footer>
-    <p style="text-align: center;">&copy; 2026 Almac & Sons Vehicle Services</p>
+    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
   </footer>
-<!-- Mobile menu JS -->
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav-right ul');
 
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
+  <script>
+    // Hamburger toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-right ul');
+    menuToggle?.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
 
-  // Booking form confirmation
-  const bookingForm = document.getElementById('bookingForm');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // prevent actual form submission
-      // Simple validation check
-      if (!bookingForm.checkValidity()) {
+    // Form confirmation popup
+    const bookingForm = document.querySelector('.booking-form');
+    bookingForm?.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+
+      if (!name || !email || !service || !date) {
         alert('Please fill in all required fields.');
         return;
       }
-      // Show confirmation pop-up
-      const name = document.getElementById('name').value;
-      const service = document.getElementById('service').value;
-      const date = document.getElementById('date').value;
-      alert(`Thank you, ${name}!\nYour booking for ${service.toUpperCase()} on ${date} has been received.`);
-      bookingForm.reset(); // optional: clears the form
+
+      alert(`Thank you ${name}! Your ${service} booking on ${date} has been received.`);
+      bookingForm.reset();
     });
-  }
-</script>
+  </script>
 </body>
 </html>
