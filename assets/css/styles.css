@@ -13,6 +13,16 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
 
 /* -------------------------
    HEADER & NAV
@@ -148,11 +158,33 @@ main {
 /* -------------------------
    FOOTER
 ------------------------- */
-footer {
+.site-footer {
   background: #222;
-  color: #fff;
-  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-left a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 40px;
+  height: auto;
 }
 
 /* -------------------------
@@ -161,6 +193,8 @@ footer {
 @media (max-width: 820px) {
   .menu-toggle {
     display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
   }
 
   .nav-links {
@@ -170,7 +204,7 @@ footer {
     margin-top: 0.5rem;
   }
 
-  #menu-checkbox:checked + .nav-links {
+  #menu-checkbox:checked ~ .nav-links {
     display: flex;
   }
 
@@ -180,5 +214,12 @@ footer {
 
   main {
     padding: 0.5rem;
+  }
+}
+@media (max-width: 820px) {
+  .site-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 }
