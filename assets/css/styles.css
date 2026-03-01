@@ -1,4 +1,3 @@
-/* Reset & base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,12 +28,10 @@ header.navbar {
 }
 
 header h1 {
-  color: red;       /* brand color */
+  color: red;
   font-size: 1.5rem;
-  margin: 0;
 }
 
-/* CSS-only mobile toggle */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -67,6 +64,27 @@ header h1 {
 main h2 {
   color: yellow;
   margin-bottom: 1rem;
+}
+
+/* -------------------------
+   MAIN & IMAGES
+------------------------- */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.page-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem auto;
+  border-radius: 5px;
+  height: auto;
+  object-fit: cover;
 }
 
 /* -------------------------
@@ -128,19 +146,6 @@ main h2 {
 }
 
 /* -------------------------
-   IMAGES
-------------------------- */
-.page-image {
-  display: block;
-  width: 100%;
-  max-width: 1100px;
-  margin: 2rem auto;
-  border-radius: 5px;
-  height: auto;
-  object-fit: cover;
-}
-
-/* -------------------------
    FOOTER
 ------------------------- */
 footer {
@@ -161,16 +166,19 @@ footer {
   .nav-links {
     flex-direction: column;
     width: 100%;
-    display: none;  /* hidden until checkbox is checked */
+    display: none;
     margin-top: 0.5rem;
   }
 
-  /* CSS-only collapsible nav using checkbox hack */
   #menu-checkbox:checked + .nav-links {
     display: flex;
   }
 
   .nav-links a {
     padding: 0.5rem 0;
+  }
+
+  main {
+    padding: 0.5rem;
   }
 }
