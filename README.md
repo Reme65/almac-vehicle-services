@@ -145,3 +145,16 @@ All code was written by the developer.
 
 * Code Institute learning materials
 * Mentor support and feedback
+
+This project uses resources made freely available under their respective licenses:
+
+- **Images**  
+  Some photographs on this site are courtesy of [Unsplash](https://unsplash.com/), used under the Unsplash License.
+
+- **Icons and Logos**  
+  Icons, logos, and graphic elements were sourced from [Freepik](https://www.freepik.com/) under the Freepik Free License.
+
+- **Favicon**  
+  Favicon generated using [favicon.io](https://favicon.io/), free for personal and commercial use.
+
+These resources are used for educational purposes and with attribution in accordance with their licenses.
