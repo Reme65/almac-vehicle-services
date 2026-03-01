@@ -186,6 +186,21 @@ main {
   width: 40px;
   height: auto;
 }
+.footer-credits {
+  font-size: 0.7rem;
+  color: #ccc;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.footer-credits a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-credits a:hover {
+  text-decoration: underline;
+}
 
 /* -------------------------
    MOBILE <820px
