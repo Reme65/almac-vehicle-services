@@ -93,7 +93,7 @@ main {
   max-width: 100%;
   margin: 1rem auto;
   border-radius: 5px;
-  height: 250px;
+  height:300px;
   object-fit: cover;
 }
 .hero-image img,
@@ -107,17 +107,19 @@ main {
    BOOKING FORM
 ------------------------- */
 .booking-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
 }
 
 .booking-form label {
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
   font-weight: bold;
 }
 
 .booking-form input,
 .booking-form select {
+  width: 100%;
   padding: 0.5rem;
   margin-top: 0.3rem;
   border-radius: 4px;
@@ -142,6 +144,7 @@ main {
 }
 
 .form-buttons {
+  grid-column: 1 / -1;
   margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
@@ -243,4 +246,7 @@ main {
     gap: 10px;
     text-align: center;
   }
+}
+.booking-form {
+  grid-template-columns: 1fr;
 }

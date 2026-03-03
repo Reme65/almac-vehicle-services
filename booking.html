@@ -71,6 +71,11 @@
     Images courtesy of <a href="https://unsplash.com/" target="_blank">Unsplash</a> and <a href="https://www.freepik.com/" target="_blank">Freepik</a>. Favicon from <a href="https://favicon.io/" target="_blank">favicon.io</a>.
   </div>
 </footer>
+<script>
+  const dateInput = document.querySelector('input[type="date"]');
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today);
+</script>
 
 </body>
 </html>
