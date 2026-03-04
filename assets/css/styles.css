@@ -84,7 +84,7 @@ main h2 {
 .hero-image img,
 .service-image img {
   width: 100%;
-  flex-grow: 1;       /* fills available vertical space */
+  height: calc(100vh - 250px);      /* fills available vertical space */
   object-fit: cover;
   border-radius: 5px;
   margin-top: 1rem;
