@@ -136,16 +136,16 @@
 ========================== -->
 
 <script>
-
 const form = document.getElementById("vehicle-form");
 const resultsDiv = document.getElementById("vehicle-results");
 
 form.addEventListener("submit", async (e) => {
-
   e.preventDefault();
 
-  const regValue =
-    document.getElementById("reg").value.trim().toUpperCase();
+  const regValue = document.getElementById("reg").value
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, "");
 
   if (!regValue) {
     resultsDiv.innerHTML = "<p>Please enter a registration number.</p>";
@@ -155,52 +155,49 @@ form.addEventListener("submit", async (e) => {
   resultsDiv.innerHTML = "<p>Searching...</p>";
 
   try {
-
     const response = await fetch(
-      `https://api.vehicleenquiry.service.gov.uk/vehicle?registrationNumber=${regValue}`,
+      "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
       {
-        method: "GET",
+        method: "POST",
         headers: {
-          "x-api-client-id": "Almac-and-sons-vehicle-services",
-          "x-api-client-secret": "eiNZPsGozh42n20qzrU2d91wDEjEvSSH51w9wNEk",
+          "x-api-key": "eiNZPsGozh42n20qzrU2d91wDEjEvSSH51w9wNEk",
+          "Content-Type": "application/json",
           "Accept": "application/json"
-        }
+        },
+        body: JSON.stringify({
+          registrationNumber: regValue
+        })
       }
     );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error ${response.status}`);
+    }
 
     const data = await response.json();
 
     if (data.registrationNumber) {
-
       resultsDiv.innerHTML = `
         <div class="vehicle-card">
           <h3>${data.registrationNumber}</h3>
-          <p><strong>Make:</strong> ${data.make}</p>
-          <p><strong>Model:</strong> ${data.model}</p>
-          <p><strong>Colour:</strong> ${data.colour}</p>
-          <p><strong>Year:</strong> ${data.yearOfManufacture}</p>
-          <p><strong>Fuel Type:</strong> ${data.fuelType}</p>
-          <button onclick="window.location.href='booking.html?reg=${regValue}'">
+          <p><strong>Make:</strong> ${data.make || "Not available"}</p>
+          <p><strong>Year:</strong> ${data.yearOfManufacture || "Not available"}</p>
+          <p><strong>Fuel Type:</strong> ${data.fuelType || "Not available"}</p>
+          <p><strong>Colour:</strong> ${data.colour || "Not available"}</p>
+          <p><strong>Engine Capacity:</strong> ${data.engineCapacity || "Not available"}</p>
+          <button onclick="window.location.href='booking.html?reg=${data.registrationNumber}'">
             Book Service
           </button>
         </div>
       `;
-
     } else {
-
       resultsDiv.innerHTML = "<p>No vehicle found.</p>";
-
     }
-
   } catch (error) {
-
-    resultsDiv.innerHTML =
-      "<p>Error retrieving data. Please try again.</p>";
-
+    resultsDiv.innerHTML = "<p>Error retrieving data. Please try again.</p>";
+    console.error(error);
   }
-
 });
-
 </script>
 
 
