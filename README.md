@@ -68,7 +68,16 @@ The website represents a **family-run local garage** offering MOT testing, vehic
 * Google Maps integration
 * Customer testimonials
 * Image gallery of the garage
+## Screenshots
 
+### Homepage - Desktop
+![Homepage desktop view](assets/readme-images/homepage.desktop.png)
+
+### Homepage - Mobile
+![Homepage mobile view](assets/readme-images/homepage-mobile.png)
+
+### Lighthouse Results
+![Lighthouse results](assets/readme-images/homepage.lighthouse.png)
 ---
 
 ## Technologies Used
@@ -95,11 +104,11 @@ Accessibility was considered throughout the project:
 
 ### Manual Testing
 
-| Feature           | Action                | Expected Result          | Outcome |
-| ----------------- | --------------------- | ------------------------ | ------- |
-| Navigation links  | Click each menu item  | Correct page loads       | Pass    |
-| Booking form      | Submit empty form     | Validation message shown | Pass    |
-| Responsive layout | Resize browser window | Layout adjusts correctly | Pass    |
+| Feature | Action | Expected Result | Outcome |
+|---|---|---|---|
+| Navigation links | Click each menu item | Correct page loads | Pass |
+| Booking form | Submit empty form | Validation message shown | Pass |
+| Responsive layout | Resize browser window | Layout adjusts correctly | Pass |
 
 ### Browser Testing
 
