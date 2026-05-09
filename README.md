@@ -124,7 +124,7 @@ Initial planning focused on creating a simple multi-page structure with:
 - Booking & Contact page
 - Thank-you confirmation page
 
-The structure was designed to allow users to move easily between pages while keeping key information visible and accessible. Basic idea can be found at ![Basic wireframe] (assets/readme-images/basic-wireframe.png)
+The structure was designed to allow users to move easily between pages while keeping key information visible and accessible. Basic idea can be found at ![Basic wireframe](assets/readme-images/basic-wireframe.png)
 
 ---
 
