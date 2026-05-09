@@ -9,7 +9,14 @@ The website represents a **family-run local garage** offering MOT testing, vehic
 ---
 
 ## User Experience (UX)
+## User Stories and Evidence
 
+| User Story | Page / Feature | Evidence |
+|---|---|---|
+| As a visitor, I want to understand what the garage offers so I can decide if it meets my needs. | Homepage | ![Homepage desktop view](assets/readme-images/homepage.desktop.png) |
+| As a customer, I want to view available garage services so I can choose the service I need. | Services page | (assets/readme-images/services.desktop.png) |
+| As a customer, I want to book or contact the garage easily so I can arrange work on my vehicle. | Booking & Contact page | (assets/readme-images/booking.desktop.png) |
+| As a mobile user, I want the site to display clearly on a small screen. | Responsive layout | ![Homepage mobile view](assets/readme-images/homepage-mobile.png) |
 ### Target Audience
 
 * Local vehicle owners
