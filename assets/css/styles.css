@@ -181,6 +181,26 @@ button:hover {
   object-fit: cover;
   border-radius: 5px;
 }
+.contact-details {
+    clear: both;
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 320px;
+    margin: 30px 40px 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.contact-details h2 {
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
 
 .form-buttons {
   grid-column: 1 / -1;
