@@ -58,10 +58,10 @@ The business goals of the site are to:
 
 | User Story | Feature Implemented | Evidence |
 |---|---|---|
-| As a visitor, I want to understand what the garage offers so I can decide if it meets my needs. | Homepage with service overview and branding | Homepage screenshot |
-| As a customer, I want to view available services so I can choose the correct option. | Dedicated services page | Services page screenshot |
-| As a customer, I want to contact the garage easily so I can arrange work on my vehicle. | Booking and contact form | Booking page screenshot |
-| As a mobile user, I want the website to display correctly on smaller screens. | Responsive CSS layout using media queries | Mobile screenshot |
+| As a visitor, I want to understand what the garage offers so I can decide if it meets my needs. | Homepage with service overview and branding | ![Homepage desktop view](assets/readme-images/homepage.desktop.png)
+| As a customer, I want to view available services so I can choose the correct option. | Dedicated services page |![Services page desktop view](assets/readme-images/services.desktop.png)|
+| As a customer, I want to contact the garage easily so I can arrange work on my vehicle. | Booking and contact form |![Booking page desktop view](assets/readme-images/booking.desktop.png)  |
+| As a mobile user, I want the website to display correctly on smaller screens. | Responsive CSS layout using media queries |![Homepage mobile view](assets/readme-images/homepage-mobile.png)  |
 
 ### Homepage - Desktop View
 
@@ -124,7 +124,7 @@ Initial planning focused on creating a simple multi-page structure with:
 - Booking & Contact page
 - Thank-you confirmation page
 
-The structure was designed to allow users to move easily between pages while keeping key information visible and accessible.
+The structure was designed to allow users to move easily between pages while keeping key information visible and accessible. Basic idea can be found at ![Wire frame] (assets/readme-images/basic-wireframe.png)
 
 ---
 
